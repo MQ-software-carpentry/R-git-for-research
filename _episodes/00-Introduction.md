@@ -1,19 +1,20 @@
 ---
-title: "Before we Start"
-teaching: 25
-exercises: 15
+title: "R Project Setup"
+teaching: 30
+exercises: 0
 questions:
 - "How to find your way around RStudio?"
+- "How to set up a version controlled project"
 - "How to interact with R?"
-- "How to manage your environment?"
-- "How to install packages?"
+
 objectives:
 - "Navigate the RStudio GUI."
 - "Set up a project with version control"
+- "Using Git tab in RStudio"
 
 keypoints:
 - "Use RStudio to write and run R programs."
-- "Use `install.packages()` to install packages (libraries)."
+- "Use Git to track changes in a project"
 ---
 
 ## R and RStudio
