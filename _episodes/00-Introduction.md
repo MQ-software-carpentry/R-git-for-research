@@ -150,17 +150,17 @@ This step "clones" the empty repository from GitHub onto your computer. Cloning 
 
 One last step is required. Git requires a username and email address, so it can attribute all of your commits to you. We need to let git know what these are. 
 
-Click 
-*File* > *New File* > *R Script*
-A new panel should open in your R studio. Save the file and title it "Git_Setup.R"
-Type the following code, replacing the example name and email address with your name and email address.
+  - Click `File` > `New File` > `R Script`
+  - A new panel should open in your R studio. Save by clicking on `File` > `Save` the file and title it `Git_Setup.R`.
+  - Type the following code, replacing the example name and email address with your name and email address.
 
 ``` r
 system('git config --global user.email "you@example.com"')
 system('git config --global user.name "Your Name"')
 ```
-R Studio will run the line you cursor is on, or any code block you have highlighted. Move your cursor to the top of the file (or highlight the code block). In the upper right corner, click "Run," or use the popular keyboard shortcut, 
-Command + enter (mac) or Control + enter (pc). Use Command + s (mac) or Control + s (pc) to save your changes. 
+  - R Studio will run the line you cursor is on, or any code block you have highlighted. Move your cursor to the top of the file (or highlight the code block). In the upper right corner, click `Run` or use the popular keyboard shortcut, 
+<kbd>Command</kbd> + <kbd>Return</kbd> (mac) or <kbd>Control</kbd> + <kbd>Return</kbd> (windows). 
+  - Use <kbd>Command</kbd> + <kbd>s</kbd>  (mac) or <kbd>Control</kbd> + <kbd>s</kbd> (windows) to save your changes. 
 
 This setup step only needs to be done once on any new device. 
 
@@ -168,9 +168,12 @@ Congratulations! Your new project is now ready to go.
 
 ### Using version control 
 
-Let's make our first "commit". Navigate to the "Git" tab in the upper right hand pane of R Studio.
-The Git tab will display the names of any files in the project that you have changed since the last commit. 
-Click the checkbox next to your Git_Setup.R script (this "stages" or "adds" the files for commit). Then click "commit" from the top bar. A window will appear, where you will need to enter a commit message that describes the changes you just made. Then you can click the commit button. Commits can be composed of changes to several files at once. 
+Let's make our first Commit. 
+  - Navigate to the `Git` tab in the upper right hand pane of R Studio. The Git tab will display the names of any files in the project that you have changed since the last commit. 
+  - Click the checkbox next to your `Git_Setup.R` script (this "stages" or "adds" the files for commit). 
+  - Click `Commit` from the top bar. 
+  - A window will appear, where you will need to enter a commit message that describes the changes you just made. 
+  - Click the `Commit` button. Commits can be composed of changes to several files at once. 
 
 Go back to your GitHub repository and refresh the page. Notice that nothing has changed. Why?
 
