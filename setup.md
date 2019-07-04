@@ -94,4 +94,147 @@ your operating system, and then follow the instructions to install
 
 * After starting RStudio, at the console type:
   `install.packages(c("tidyverse"))`
+  
+  
+### Git 
+
+<div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatability	
+           is given at https://help.github.com/articles/supported-browsers/{% endcomment %}	
+  <h3>Git</h3>	
+  <p>	
+    Git is a version control system that lets you track who made changes	
+    to what when and has options for easily updating a shared or public	
+    version of your code	
+    on <a href="https://github.com/">github.com</a>. You will need a	
+    <a href="https://help.github.com/articles/supported-browsers/">supported</a>	
+    web browser (current versions of Chrome, Firefox or Safari,	
+    or Internet Explorer version 9 or above).	
+  </p>	
+  <p>	
+    You will need an account at <a href="https://github.com/">github.com</a>	
+    for parts of this lesson. **Create a GitHub account if you don't have one already.**	Basic GitHub accounts are free.
+    You can also get a free GitHub Pro account for education. Use your university email address to create your GitHub account, then apply for an [education discount](https://education.github.com/benefits). 
+    Please consider what personal information you'd like to reveal. For	
+    example, you may want to review these	
+    <a href="https://help.github.com/articles/keeping-your-email-address-private/">instructions	
+    for keeping your email address private</a> provided at GitHub.	
+  </p>	
+   <div class="row">	
+    <div class="col-md-4">	
+      <h4 id="git-windows">Windows</h4>	
+      <ol>	
+        <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>	
+        <li>Run the installer and follow the steps below:	
+          <ol>	
+            {% comment %} Git 2.18.0 Setup {% endcomment %}	
+            <li>	
+                Click on "Next" four times (two times if you've previously	
+                installed Git).  You don't need to change anything	
+                in the Information, location, components, and start menu screens.	
+            </li>	
+            <li>	
+                <strong>	
+                Select “Use the nano editor by default” and click on “Next”.	
+                </strong>	
+            </li>	
+            {% comment %} Adjusting your PATH environment {% endcomment %}	
+            <li>	
+                Keep "Use Git from the Windows Command Prompt" selected and click on "Next".	
+                If you forgot to do this programs that you need for the workshop will not work properly.	
+                If this happens rerun the installer and select the appropriate option.	
+            </li>	
+            {% comment %} Choosing the SSH executable {% endcomment %}	
+            <li>Click on "Next".</li>	
+            {% comment %} Configuring the line ending conversions {% endcomment %}	
+            <li>	
+                Keep "Checkout Windows-style, commit Unix-style line endings" selected and click on "Next".	
+            </li>	
+            {% comment %} Configuring the terminal emulator to use with Git Bash {% endcomment %}	
+            <li>	
+              <strong>	
+                Select "Use Windows' default console window" and click on "Next".	
+              </strong>	
+            </li>	
+            {% comment %} Configuring experimental performance tweaks {% endcomment %}	
+            <li>Click on "Install".</li>	
+            {% comment %} Installing {% endcomment %}	
+            {% comment %} Completing the Git Setup Wizard {% endcomment %}	
+            <li>Click on "Finish".</li>	
+          </ol>	
+        </li>	
+        <li>
+          To ensure that you can use git with RStudio:
+          <ol>
+            <li>Open RStudio.</li>
+            <li>In the menu, click on "Tools > Global Options...".</li>
+            <li>Click on "Git/SVN".</li>
+            <li>Ensure the checkbox "Enable version control interface for RStudio projects" is selected.</li>
+            <li>Under "Git executable" click on "Browse".</li>
+            <li>Navigate to the location of <code>git.exe</code>. This is typically located in "C:\Users\&#60;Your-User-Name&#62;\AppData\Local\Programs\Git\bin".</li>
+            <li>Click "Open".</li>
+            <li>Click "OK".</li>
+          </ol>
+        </li>
+      </ol>
+      <p>This will provide you with both Git and Bash in the Git Bash program.</p>
+    </div>
+    <div class="col-md-4">	
+      <h4 id="git-macosx">macOS</h4>	
+      <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>	
+      <ol>
+        <li>	
+          <strong>For OS X 10.9 and higher</strong>, install Git for Mac	
+          by downloading and running the most recent "mavericks" installer from	
+          <a href="http://sourceforge.net/projects/git-osx-installer/files/">this list</a>.	
+          Because this installer is not signed by the developer, you may have to	
+          right click (control click) on the .pkg file, click Open, and click	
+          Open on the pop up window. 	
+          After installing Git, there will not be anything in your <code>/Applications</code> folder,	
+          as Git is a command line program.	
+          <strong>For older versions of OS X (10.5-10.8)</strong> use the	
+          most recent available installer labelled "snow-leopard"	
+          <a href="http://sourceforge.net/projects/git-osx-installer/files/">available here</a>.	
+        </li>
+        <li>
+          To ensure that you can use git with RStudio:
+          <ol>
+            <li>Open RStudio.</li>
+            <li>In the menu, click on "Tools > Global Options...".</li>
+            <li>Click on "Git/SVN".</li>
+            <li>Ensure the checkbox "Enable version control interface for RStudio projects" is selected.</li>
+            <li>Under "Git executable" click on "Browse".</li>
+            <li>Navigate to the location of the <code>git</code> executable.</li>
+            <li>Click "Open".</li>
+            <li>Click "OK".</li>
+          </ol>
+        </li>
+      </ol>	
+    </div>	
+    <div class="col-md-4">	
+      <h4 id="git-linux">Linux</h4>
+      <ol>
+        <li>
+          If Git is not already available on your machine you can try to	
+          install it via your distro's package manager. For Debian/Ubuntu run	
+          <code>sudo apt-get install git</code> and for Fedora run	
+          <code>sudo dnf install git</code>.
+        </li>
+        <li>
+          To ensure that you can use git with RStudio:
+          <ol>
+            <li>Open RStudio.</li>
+            <li>In the menu, click on "Tools > Global Options...".</li>
+            <li>Click on "Git/SVN".</li>
+            <li>Ensure the checkbox "Enable version control interface for RStudio projects" is selected.</li>
+            <li>Under "Git executable" click on "Browse".</li>
+            <li>Navigate to the location of the <code>git</code> executable. This is typically located in "/usr/bin".</li>
+            <li>Click "Open".</li>
+            <li>Click "OK".</li>
+          </ol>
+        </li>
+      </ol>
+    </div>	
+  </div>	
+</div> {% comment %} End of 'Git' section. {% endcomment %}
+
 
