@@ -8,6 +8,7 @@ _site
 .Rproj.user
 .Rhistory
 .RData
+*.Rproj
 
 _episodes_rmd/data/SAFI_clean.csv
 _episodes_rmd/data_output/interviews_plotting.csv
