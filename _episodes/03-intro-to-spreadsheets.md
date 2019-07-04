@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Introduction to Spreadsheets"
 teaching: 15
 exercises: 3
 questions:
