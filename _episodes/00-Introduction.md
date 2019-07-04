@@ -148,7 +148,39 @@ Decide where you want to store your project (for instance, on your Desktop, or i
 
 This step "clones" the empty repository from GitHub onto your computer. Cloning is a git term that means, copy or duplicate, and ensures that the repository remembers where it came from. This makes it easier to upload, or "push", your changes to the "remote" repository later. 
 
-Congratulations! Your new project is now ready to go. Now, we will set up our project directories. 
+One last step is required. Git requires a username and email address, so it can attribute all of your commits to you. We need to let git know what these are. 
+
+Click 
+*File* > *New File* > *R Script*
+A new panel should open in your R studio. Save the file and title it "Git_Setup.R"
+Type the following code, replacing the example name and email address with your name and email address.
+
+``` r
+system('git config --global user.email "you@example.com"')
+system('git config --global user.name "Your Name"')
+```
+R Studio will run the line you cursor is on, or any code block you have highlighted. Move your cursor to the top of the file (or highlight the code block). In the upper right corner, click "Run," or use the popular keyboard shortcut, 
+Command + enter (mac) or Control + enter (pc). Use Command + s (mac) or Control + s (pc) to save your changes. 
+
+This setup step only needs to be done once on any new device. 
+
+Congratulations! Your new project is now ready to go.
+
+### Using version control 
+
+Let's make our first "commit". Navigate to the "Git" tab in the upper right hand pane of R Studio.
+The Git tab will display the names of any files in the project that you have changed since the last commit. 
+Click the checkbox next to your Git_Setup.R script (this "stages" or "adds" the files for commit). Then click "commit" from the top bar. A window will appear, where you will need to enter a commit message that describes the changes you just made. Then you can click the commit button. Commits can be composed of changes to several files at once. 
+
+Go back to your GitHub repository and refresh the page. Notice that nothing has changed. Why?
+
+To make commits in a local repository, you do not have to have a connection to a remote repository. Commits are stored locally on your computer. They need to be "Pushed" to the remote repository to appear on GitHub. Let's do that now. 
+
+In the Git window, click "Push" in the top bar. You may be asked to enter your GitHub username and password. 
+
+In a few seconds, your changes should appear on your GitHub repository. 
+
+
 
 
 
