@@ -5,6 +5,8 @@ title: Setup
 
 ## Setup instructions
 
+## R and RStudio
+
 **R** and **RStudio** are separate downloads and installations. R is the
 underlying statistical computing environment, but using R alone is no
 fun. RStudio is a graphical integrated development environment (IDE) that makes
@@ -95,8 +97,7 @@ your operating system, and then follow the instructions to install
 * After starting RStudio, at the console type:
   `install.packages(c("tidyverse"))`
   
-  
-### Git 
+
 
 <div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatability	
            is given at https://help.github.com/articles/supported-browsers/{% endcomment %}	
