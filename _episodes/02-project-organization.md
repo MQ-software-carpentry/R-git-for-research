@@ -25,7 +25,7 @@ It's important to ensure that your project directory (also called your "working 
 
   - In the `Files` tab of the lower right hand pane of RStudio, click on the `New Folder` button. 
   - Create a folder named `Data`
-  - Repeat to create another folder called `Scripts`, and another called `Figures`. As you progress through your candidature, you may wish to create additional folders, such as `Results` or `Manuscript`. For this workshop, we will focus on R-related folders like Data, Scripts, and Figures.
+  - Repeat to create another folder called `Scripts`, and another called `Figures`. As you progress through your project, you may wish to create additional folders, such as `Results` or `Manuscript`. For this workshop, we will focus on R-related folders like Data, Scripts, and Figures.
   
 Since we already have a script, let's move it into our `Scripts` folder.
   - Tick the checkbox next to `Git_Setup.R` in the `Files` tab. 
