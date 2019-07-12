@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Introduction to OpenRefine"
 teaching: 10
 exercises: 0
 questions:
