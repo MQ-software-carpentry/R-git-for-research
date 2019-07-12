@@ -258,6 +258,9 @@ as part of your research.
 > included in the messy spreadsheet and is formatted according to tidy data
 > principles.
 >
+> Remember to save your script and commit the file to Git. This can be done in the
+> Git tab in RStudio, which is usually at the top-right of the screen.
+>
 > Discuss this data with a partner and make a list of some of the types of
 > metadata that should be recorded about this dataset. It may be helpful to
 > start by asking yourself, "What is not immediately obvious to me about this
