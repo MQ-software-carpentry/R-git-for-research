@@ -80,7 +80,8 @@ example data collected in January of multiple years with data collected in Febru
 
 > ## Separating dates into components
 >
-> Download and open the [dates.xlsx](https://ndownloader.figshare.com/files/11502827) file. This file
+> Download and open the [dates.xlsx](https://mq-software-carpentry.github.io/R-git-for-research/data/SAFI_dates.xlsx)
+> file. This file
 > contains a subset of the data from the SAFI interviews, including the dates on which the
 > interviews were conducted.
 >

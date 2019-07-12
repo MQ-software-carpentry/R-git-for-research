@@ -148,7 +148,9 @@ page](http://www.datacarpentry.org/socialsci-workshop/data).
 >
 > We're going to take a messy version of the SAFI data and describe how we would clean it up.
 >
-> 1. Download the [messy data](https://ndownloader.figshare.com/files/11502824).
+> 1. We have already downloaded the data into the `data` directory. If you haven't,
+>    go back to the
+>    [previous lesson]({% link _episodes/02-project-organization.md %}).
 > 2. Open up the data in a spreadsheet program.
 > 3. Notice that there are two tabs. Two researchers conducted the interviews,
 >    one in Mozambique and the other in Tanzania. They both structured their
@@ -244,8 +246,14 @@ as part of your research.
 
 > ## Exercise
 >
-> Download a [clean version of this
-> dataset](https://ndownloader.figshare.com/files/11492171) and open the file
+> Download a clean version of this dataset by going back to R and in your
+> `Data_Downloads.R` script file, type
+> 
+> ``` r
+> download.file(url = "https://mq-software-carpentry.github.io/R-git-for-research/data/SAFI_clean.csv", destfile = "./data/SAFI_clean.csv")
+> ```
+> 
+> and open the file
 > with your spreadsheet program. This data has many more variables that were not
 > included in the messy spreadsheet and is formatted according to tidy data
 > principles.
