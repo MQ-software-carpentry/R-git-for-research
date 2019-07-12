@@ -69,7 +69,9 @@ The first major step after setting up a project is usually acquiring data for yo
 Let's get some data to put in our Data folder. Create a new script by clicking `File` > `New File` > `R Script`
 Paste or type the following code into the empty file that opens. 
 
-`download.file(url = "https://mq-software-carpentry.github.io/R-git-for-research/data/SAFI_messy.xlsx", destfile = "./data/SAFI_messy.xlsx", mode = "wb")`
+``` r
+download.file(url = "https://mq-software-carpentry.github.io/R-git-for-research/data/SAFI_messy.xlsx", destfile = "./data/SAFI_messy.xlsx", mode = "wb")
+```
 
 Be sure to save your new script `File` > `Save As`. Let's name our script `Data_Downloads.R` and save it in our **`scripts`** folder. Place your cursor on the line of code and click `Run` to download the data.
 
