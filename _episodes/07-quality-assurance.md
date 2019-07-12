@@ -65,7 +65,7 @@ The value in the data box will say 'between' and `Minimum` and `Maximum` boxes w
 
 ![Image of data validation tab for number rules](../fig/data-validation-numbers.png)
 
-5\. Fill in the minimum and maximum values that make sense for your data and click `Ok`. Here we will choose a minimum of 1 and a maximum of 30.
+5\. Fill in the minimum and maximum values that make sense for your data and click `OK`. Here we will choose a minimum of 1 and a maximum of 30.
 
 Your data table will now not allow you to enter a value that violates
 the data validation rule you have created. To test this out, try 
