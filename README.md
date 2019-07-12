@@ -4,9 +4,9 @@
 
 # r-git-for-reserach
 
-Workshop on R and other software tools for researchers, targeted at first-year Higher Degree research students. 
-This workshop is amalgamaged from data carpentry workshops for R, spreadsheets, and OpenRefine, and includes applied practice with git-based version control throughout the episodes. 
+Workshop on R and other software tools for researchers, targeted at researchers without any prior experience in R.
+This workshop is amalgamaged from Data Carpentry workshops for R, spreadsheets, and OpenRefine, and includes applied practice with git-based version control throughout the episodes. 
 
-The purpose of this workshop is to show students a sound research workflow that emphasizes how the different pieces of software interact. The episodes in the workshop are not as standalone as usual carpentry workshops, but they demonstrate how a student might set up a version controlled project, load data into it, and commit changes to data and script files in the process. The focus is on setting up and managing an entire project through R Studio. 
+The purpose of this workshop is to show students a sound research workflow that emphasizes how the different pieces of software interact. The episodes in the workshop are not as standalone as usual Carpentry workshops, but they demonstrate how a student might set up a version controlled project, load data into it, and commit changes to data and script files in the process. The focus is on setting up and managing an entire project through R Studio. 
 
 
