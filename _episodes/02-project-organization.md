@@ -60,6 +60,10 @@ For the purposes of demonstration, let's make sure that our git repository does 
   - In the dialogue box, enter *.xlsx. This will ensure that excel files will not be tracked by git. 
   - Git can be taught to ignore file types (e.g. *.csv), specific files, or even entire folders. If you have many data files in a `raw_data` folder, telling Git to ignore the folder is enough.
   
+There are several other reasons to tell git to ignore a file. Some systems produce machine-specific files that will not work on another computer. (for example, ".DS_Store" on Macs). When you close R Studio, if you choose to save your environment, R will produce .RHistory and .RData files that back up (potentially gigabytes!) of data from your workspace. Trackin these is probably not a good idea. 
+
+Have a look at your project directory in the `Files` tab in the lower right hand panel. You should see a file called `.gitignore`. This is where git stores information about what files NOT to track. Notice that R Studio has automatically added its .Rdata and .Rhistory files to the list of ignored files. At the bottom of the list, you should see our recent addition, excel files. 
+
 
 
 
