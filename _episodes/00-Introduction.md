@@ -50,9 +50,8 @@ To make it easier to interact with R, we will use RStudio. RStudio is the most p
 
 <figcaption>
 RStudio extends what R can do, and make it easier to write R code and interact
-with R. [Credit photo left
-photo](https://commons.wikimedia.org/w/index.php?curid=2447462), [Credit photo right
-photo](https://commons.wikimedia.org/w/index.php?curid=44599363)
+with R. [Credit photo left photo](https://commons.wikimedia.org/w/index.php?curid=2447462),
+[Credit photo right photo](https://commons.wikimedia.org/w/index.php?curid=44599363)
 </figcaption>
 </figure>
 
