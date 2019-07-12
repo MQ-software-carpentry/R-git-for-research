@@ -38,6 +38,8 @@ the results will be shown for commands that have been executed. You can type
 commands directly into the console and press <kbd>Enter</kbd> to execute those commands,
 but they will be forgotten when you close the session.
 
+Type into the console: `print("Hello World")`
+
 Because we want our code and workflow to be reproducible, it is better to type
 the commands we want in the script editor, and save the script. This way, there
 is a complete record of what we did, and anyone (including our future selves!)
