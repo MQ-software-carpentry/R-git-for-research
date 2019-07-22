@@ -38,7 +38,7 @@ the results will be shown for commands that have been executed. You can type
 commands directly into the console and press <kbd>Enter</kbd> to execute those commands,
 but they will be forgotten when you close the session.
 
-Type into the console: `print("Hello World")`
+Type into the console: `print("Hello, World")`
 
 Because we want our code and workflow to be reproducible, it is better to type
 the commands we want in the script editor, and save the script. This way, there
@@ -49,7 +49,7 @@ Let's create a new script where we will save the commands that we cover in this 
 Create a new script by clicking `File` > `New File` > `R Script`
 Before proceeding, be sure to save your new script `File` > `Save As`. Let's name our script `Introduction.R` and save it in our **`scripts`** folder. 
 
-Type into your new script file: `print("Hello World")`
+Type into your new script file: `print("Hello, World")`
 
 RStudio allows you to execute commands directly from the script editor by using
 the <kbd>Ctrl</kbd> + <kbd>Enter</kbd> shortcut (on Macs, <kbd>Cmd</kbd> +
@@ -139,6 +139,14 @@ install.packages("tidyverse")
 
 was written to the console. 
 
-You could also have installed the **`tidyverse`** packages by running this command directly at the R terminal. It's a good idea to keep track of what external packages you are using in your scripts, because it makes it much easier for others (and future you!) to replicate your analyses. Let's add line of install code to our script and save it. 
+You could also have installed the **`tidyverse`** packages by running this command directly at the R Console. Packages only need to be installed once on any computer, but they need to be activated every time you start a new R session. 
+
+It's a good idea to keep track of what external packages you are using in your scripts, because it makes it much easier for others (and future you!) to replicate your analyses. Let's add line of install code to our script and save it. In the next line, add the following: 
+
+```{r, eval = FALSE}
+library(tidyverse)
+```
+
+This code activates the **`tidyverse`** package and makes its functionality available in RStudio. 
 
 {% include links.md %}

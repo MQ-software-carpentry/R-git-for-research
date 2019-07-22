@@ -195,9 +195,7 @@ to select the whole line), then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
 {: .challenge}
 
 
-At this stage we want to make sure we have saved our script and tracked changes. Save your script file if you have not done so already. Navigate to the `Git` tab in RStudio. As we have done 
-
-
+At this stage we want to make sure we have saved our script and tracked changes. Save your script file if you have not done so already. Navigate to the `Git` tab in RStudio. As we have done previously, tick the box next to the file you want to stage (in this case, Introduction.R), and click `Commit`. Remember that you will need a mandatory commit message. For example, in this case we could type, "Add code to demonstrate object assignment and comments in R." Click `Commit`. To send your changes to the remote repository on GitHub, click `Push`. 
 
 ### Functions and their arguments
 
@@ -283,6 +281,8 @@ doing.
 > What other functions exist that are similar to `round`?
 > How do you use the `digits` parameter in the round function?
 {: .challenge}
+
+Let's save, commit, and push our script again. You should be starting to feel comfortable with this process. Remember that your changes will not be committed or pushed unless they are saved first! 
 
 ## Vectors and data types
 
@@ -437,6 +437,7 @@ factors (`factor`) and arrays (`array`).
 >
 {: .challenge}
 
+Track your changes (Save, Commit, and Push)!
 
 ## Subsetting vectors
 
@@ -570,6 +571,8 @@ Recall that you can use the `typeof()` function to find the type of your atomic 
 > > ```
 > {: .solution}
 {: .challenge}
+
+Let's do a final commit and push for this lesson. When the commit window opens, take a look at the bottom part of the window. You should see a copy of the script you are committing with some green (and possibly some pink) highlights. This shows the changes or "differences", also referred to as "diffs", you have made. Additions are highlighted in green and deletions in pink. You can also view the diffs between your current version and your last commit, by using the `Diff` button directly from the `Git` tab. 
 
 Now that we have learned how to write scripts, and the basics of R's data
 structures, we are ready to start working with the SAFI dataset we have been
