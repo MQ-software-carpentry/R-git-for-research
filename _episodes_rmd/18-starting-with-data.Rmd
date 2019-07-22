@@ -27,7 +27,7 @@ keypoints:
 
 ```{r, include=FALSE}
 source("../bin/chunk-options.R")
-knitr_fig_path("02-")
+knitr_fig_path("18-")
 source("../bin/download_data.R")
 ```
 
@@ -63,11 +63,19 @@ represent:
 | months_lack_food | Indicate which months, In the last 12 months have you faced a situation when you did not have enough food to feed the household? |
 | instanceID | Unique identifier for the form data submission |
 
+Let's create a new script for our analysis of the SAFI data. 
+Create a new script by clicking `File` > `New File` > `R Script`
+Before proceeding, be sure to save your new script `File` > `Save As`. Let's name our script `SAFI_analysis.R` and save it in our **`scripts`** folder. 
+We will be using the **`tidyverse`** package to work with the SAFI dataset, so before we read in the data, we need to make sure that the package is loaded. 
+
+```{r, eval=TRUE,  message=FALSE, purl=FALSE, warning=FALSE}
+# install.packages("tidyverse")
+library(tidyverse)
+```
 
 You are going load the data in R's memory using the function `read_csv()` from the **`readr`** package which is part of the **`tidyverse`**. So, before we can use the `read_csv()` function, we need to load the package. Also, if you recall, the missing data is encoded as "NULL" in the dataset. We'll tell it to the function, so R will automatically convert all the "NULL" entries in the dataset into `NA`.
 
 ```{r, eval=TRUE,  message=FALSE, purl=FALSE, warning=FALSE}
-library(tidyverse)
 interviews <- read_csv("data/SAFI_clean.csv", na = "NULL")
 ```
 
@@ -93,6 +101,8 @@ interviews
 > the `read_tsv()` for tab-separated data files, and `read_delim()` allows you
 > to specify more details about the structure of your file.
 {: .callout}
+
+Commit and push your new script with the commit message, "Add script to in SAFI data using the read_csv() function in the readr package."
 
 ## What are data frames?
 
@@ -140,10 +150,10 @@ the object)
 length and content of each column
 * `summary(interviews)` - summary statistics for each column
 
-Note: most of these functions are "generic", they can be used on other types of
-objects besides data frames.
-
-
+> ## Note 
+> Most of these functions are "generic", they can be used on other types of
+> objects besides data frames.
+{: .callout}
 
 ## Indexing and subsetting data frames
 
@@ -235,6 +245,7 @@ In RStudio, you can use the autocompletion feature to get the full and correct n
 > {: .solution}
 {: .challenge}
 
+Take a moment to save, commit and push your changes to your script. 
 
 ## Factors
 
@@ -290,7 +301,6 @@ levels(respondent_floor_type)[2] <- "brick"
 levels(respondent_floor_type)
 respondent_floor_type
 ```
-
 
 
 ### Converting factors
@@ -382,8 +392,7 @@ plot(affect_conflicts)
 > {: .solution}
 {: .challenge}
 
-Now that you have created this plot, it may be a good time to commit the changes you
-made to the R script to your git repository.
+Now that you have created this plot, it may be a good time to commit the changes you made to the R script to your git repository.
 
 
 ## Formatting Dates
@@ -432,5 +441,7 @@ interviews
 ```
 
 Notice the three new columns at the end of our data frame.
+
+Before you move on, commit and push if you haven't done so already.
 
 {% include links.md %}
