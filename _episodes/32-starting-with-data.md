@@ -91,20 +91,6 @@ loaded, we can see the contents of the data frame by typing its name: `interview
 
 ~~~
 interviews
-~~~
-{: .language-r}
-
-
-
-~~~
-Warning in as.POSIXlt.POSIXct(x, tz): unknown timezone 'zone/tz/2019a.1.0/
-zoneinfo/Australia/Sydney'
-~~~
-{: .error}
-
-
-
-~~~
 ## Try also
 ## View(interviews)
 ~~~
@@ -114,8 +100,8 @@ zoneinfo/Australia/Sydney'
 
 ~~~
 # A tibble: 131 x 14
-   key_ID village interview_date      no_membrs years_liv respondent_wall…
-    <int> <chr>   <dttm>                  <int>     <int> <chr>           
+   key_ID village interview_date      no_membrs years_liv respondent_wall~
+    <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>           
  1      1 God     2016-11-17 00:00:00         3         4 muddaub         
  2      1 God     2016-11-17 00:00:00         7         9 muddaub         
  3      3 God     2016-11-17 00:00:00        10        15 burntbricks     
@@ -123,12 +109,12 @@ zoneinfo/Australia/Sydney'
  5      5 God     2016-11-17 00:00:00         7        40 burntbricks     
  6      6 God     2016-11-17 00:00:00         3         3 muddaub         
  7      7 God     2016-11-17 00:00:00         6        38 muddaub         
- 8      8 Chirod… 2016-11-16 00:00:00        12        70 burntbricks     
- 9      9 Chirod… 2016-11-16 00:00:00         8         6 burntbricks     
-10     10 Chirod… 2016-12-16 00:00:00        12        23 burntbricks     
-# … with 121 more rows, and 8 more variables: rooms <int>,
-#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <int>,
-#   items_owned <chr>, no_meals <int>, months_lack_food <chr>,
+ 8      8 Chirod~ 2016-11-16 00:00:00        12        70 burntbricks     
+ 9      9 Chirod~ 2016-11-16 00:00:00         8         6 burntbricks     
+10     10 Chirod~ 2016-12-16 00:00:00        12        23 burntbricks     
+# ... with 121 more rows, and 8 more variables: rooms <dbl>,
+#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <dbl>,
+#   items_owned <chr>, no_meals <dbl>, months_lack_food <chr>,
 #   instanceID <chr>
 ~~~
 {: .output}
@@ -218,7 +204,7 @@ interviews[1, 1]
 ~~~
 # A tibble: 1 x 1
   key_ID
-   <int>
+   <dbl>
 1      1
 ~~~
 {: .output}
@@ -254,7 +240,7 @@ interviews[, 1]
 ~~~
 # A tibble: 131 x 1
    key_ID
-    <int>
+    <dbl>
  1      1
  2      1
  3      3
@@ -265,7 +251,7 @@ interviews[, 1]
  8      8
  9      9
 10     10
-# … with 121 more rows
+# ... with 121 more rows
 ~~~
 {: .output}
 
@@ -282,7 +268,7 @@ interviews[1]
 ~~~
 # A tibble: 131 x 1
    key_ID
-    <int>
+    <dbl>
  1      1
  2      1
  3      3
@@ -293,7 +279,7 @@ interviews[1]
  8      8
  9      9
 10     10
-# … with 121 more rows
+# ... with 121 more rows
 ~~~
 {: .output}
 
@@ -310,7 +296,7 @@ interviews[1:3, 7]
 ~~~
 # A tibble: 3 x 1
   rooms
-  <int>
+  <dbl>
 1     1
 2     1
 3     1
@@ -329,12 +315,12 @@ interviews[3, ]
 
 ~~~
 # A tibble: 1 x 14
-  key_ID village interview_date      no_membrs years_liv respondent_wall…
-   <int> <chr>   <dttm>                  <int>     <int> <chr>           
+  key_ID village interview_date      no_membrs years_liv respondent_wall~
+   <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>           
 1      3 God     2016-11-17 00:00:00        10        15 burntbricks     
-# … with 8 more variables: rooms <int>, memb_assoc <chr>,
-#   affect_conflicts <chr>, liv_count <int>, items_owned <chr>,
-#   no_meals <int>, months_lack_food <chr>, instanceID <chr>
+# ... with 8 more variables: rooms <dbl>, memb_assoc <chr>,
+#   affect_conflicts <chr>, liv_count <dbl>, items_owned <chr>,
+#   no_meals <dbl>, months_lack_food <chr>, instanceID <chr>
 ~~~
 {: .output}
 
@@ -361,8 +347,8 @@ interviews[, -1]          # The whole data frame, except the first column
 
 ~~~
 # A tibble: 131 x 13
-   village interview_date      no_membrs years_liv respondent_wall… rooms
-   <chr>   <dttm>                  <int>     <int> <chr>            <int>
+   village interview_date      no_membrs years_liv respondent_wall~ rooms
+   <chr>   <dttm>                  <dbl>     <dbl> <chr>            <dbl>
  1 God     2016-11-17 00:00:00         3         4 muddaub              1
  2 God     2016-11-17 00:00:00         7         9 muddaub              1
  3 God     2016-11-17 00:00:00        10        15 burntbricks          1
@@ -370,12 +356,12 @@ interviews[, -1]          # The whole data frame, except the first column
  5 God     2016-11-17 00:00:00         7        40 burntbricks          1
  6 God     2016-11-17 00:00:00         3         3 muddaub              1
  7 God     2016-11-17 00:00:00         6        38 muddaub              1
- 8 Chirod… 2016-11-16 00:00:00        12        70 burntbricks          3
- 9 Chirod… 2016-11-16 00:00:00         8         6 burntbricks          1
-10 Chirod… 2016-12-16 00:00:00        12        23 burntbricks          5
-# … with 121 more rows, and 7 more variables: memb_assoc <chr>,
-#   affect_conflicts <chr>, liv_count <int>, items_owned <chr>,
-#   no_meals <int>, months_lack_food <chr>, instanceID <chr>
+ 8 Chirod~ 2016-11-16 00:00:00        12        70 burntbricks          3
+ 9 Chirod~ 2016-11-16 00:00:00         8         6 burntbricks          1
+10 Chirod~ 2016-12-16 00:00:00        12        23 burntbricks          5
+# ... with 121 more rows, and 7 more variables: memb_assoc <chr>,
+#   affect_conflicts <chr>, liv_count <dbl>, items_owned <chr>,
+#   no_meals <dbl>, months_lack_food <chr>, instanceID <chr>
 ~~~
 {: .output}
 
@@ -390,17 +376,17 @@ interviews[-c(7:131), ]   # Equivalent to head(interviews)
 
 ~~~
 # A tibble: 6 x 14
-  key_ID village interview_date      no_membrs years_liv respondent_wall…
-   <int> <chr>   <dttm>                  <int>     <int> <chr>           
+  key_ID village interview_date      no_membrs years_liv respondent_wall~
+   <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>           
 1      1 God     2016-11-17 00:00:00         3         4 muddaub         
 2      1 God     2016-11-17 00:00:00         7         9 muddaub         
 3      3 God     2016-11-17 00:00:00        10        15 burntbricks     
 4      4 God     2016-11-17 00:00:00         7         6 burntbricks     
 5      5 God     2016-11-17 00:00:00         7        40 burntbricks     
 6      6 God     2016-11-17 00:00:00         3         3 muddaub         
-# … with 8 more variables: rooms <int>, memb_assoc <chr>,
-#   affect_conflicts <chr>, liv_count <int>, items_owned <chr>,
-#   no_meals <int>, months_lack_food <chr>, instanceID <chr>
+# ... with 8 more variables: rooms <dbl>, memb_assoc <chr>,
+#   affect_conflicts <chr>, liv_count <dbl>, items_owned <chr>,
+#   no_meals <dbl>, months_lack_food <chr>, instanceID <chr>
 ~~~
 {: .output}
 
@@ -892,8 +878,8 @@ interviews
 
 ~~~
 # A tibble: 131 x 17
-   key_ID village interview_date      no_membrs years_liv respondent_wall…
-    <int> <chr>   <dttm>                  <int>     <int> <chr>           
+   key_ID village interview_date      no_membrs years_liv respondent_wall~
+    <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>           
  1      1 God     2016-11-17 00:00:00         3         4 muddaub         
  2      1 God     2016-11-17 00:00:00         7         9 muddaub         
  3      3 God     2016-11-17 00:00:00        10        15 burntbricks     
@@ -901,12 +887,12 @@ interviews
  5      5 God     2016-11-17 00:00:00         7        40 burntbricks     
  6      6 God     2016-11-17 00:00:00         3         3 muddaub         
  7      7 God     2016-11-17 00:00:00         6        38 muddaub         
- 8      8 Chirod… 2016-11-16 00:00:00        12        70 burntbricks     
- 9      9 Chirod… 2016-11-16 00:00:00         8         6 burntbricks     
-10     10 Chirod… 2016-12-16 00:00:00        12        23 burntbricks     
-# … with 121 more rows, and 11 more variables: rooms <int>,
-#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <int>,
-#   items_owned <chr>, no_meals <int>, months_lack_food <chr>,
+ 8      8 Chirod~ 2016-11-16 00:00:00        12        70 burntbricks     
+ 9      9 Chirod~ 2016-11-16 00:00:00         8         6 burntbricks     
+10     10 Chirod~ 2016-12-16 00:00:00        12        23 burntbricks     
+# ... with 121 more rows, and 11 more variables: rooms <dbl>,
+#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <dbl>,
+#   items_owned <chr>, no_meals <dbl>, months_lack_food <chr>,
 #   instanceID <chr>, day <int>, month <dbl>, year <dbl>
 ~~~
 {: .output}

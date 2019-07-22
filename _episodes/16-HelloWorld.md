@@ -43,12 +43,20 @@ the commands we want in the script editor, and save the script. This way, there
 is a complete record of what we did, and anyone (including our future selves!)
 can easily replicate the results on their computer.
 
+Let's create a new script where we will save the commands that we cover in this section. 
+Create a new script by clicking `File` > `New File` > `R Script`
+Before proceeding, be sure to save your new script `File` > `Save As`. Let's name our script `Introduction.R` and save it in our **`scripts`** folder. 
+
+Type into your new script file: `print("Hello World")`
+
 RStudio allows you to execute commands directly from the script editor by using
 the <kbd>Ctrl</kbd> + <kbd>Enter</kbd> shortcut (on Macs, <kbd>Cmd</kbd> +
 <kbd>Return</kbd> will work, too). The command on the current line in the
 script (indicated by the cursor) or all of the commands in the currently
 selected text will be sent to the console and executed when you press
 <kbd>Ctrl</kbd> + <kbd>Enter</kbd>. You can find other keyboard shortcuts in this [RStudio cheatsheet about the RStudio IDE](https://github.com/rstudio/cheatsheets/raw/master/rstudio-ide.pdf).
+
+Place your cursor on the line of code and try out the keyboard shortcut for your system. You will notice the command and the output appear in your console. 
 
 At some point in your analysis you may want to check the content of a variable
 or the structure of an object, without necessarily keeping a record of it in
@@ -131,6 +139,6 @@ install.packages("tidyverse")
 
 was written to the console. 
 
-You could also have installed the **`tidyverse`** packages by running this command directly at the R terminal.
+You could also have installed the **`tidyverse`** packages by running this command directly at the R terminal. It's a good idea to keep track of what external packages you are using in your scripts, because it makes it much easier for others (and future you!) to replicate your analyses. Let's add line of install code to our script and save it. 
 
 {% include links.md %}
