@@ -101,7 +101,7 @@ your operating system, and then follow the instructions to install
 
 <div id="git"> {% comment %} Start of 'Git' section. GitHub browser compatability	
            is given at https://help.github.com/articles/supported-browsers/{% endcomment %}	
-  <h3>Git</h3>	
+  <h2>Git</h2>	
   <p>	
     Git is a version control system that lets you track who made changes	
     to what when and has options for easily updating a shared or public	
@@ -122,7 +122,7 @@ your operating system, and then follow the instructions to install
   </p>	
    <div class="row">	
     <div class="col-md-4">	
-      <h4 id="git-windows">Windows</h4>	
+      <h3 id="git-windows">Windows</h3>	
       <ol>	
         <li>Download the Git for Windows <a href="https://git-for-windows.github.io/">installer</a>.</li>	
         <li>Run the installer and follow the steps below:	
@@ -179,8 +179,8 @@ your operating system, and then follow the instructions to install
       </ol>
       <p>This will provide you with both Git and Bash in the Git Bash program.</p>
     </div>
-    <div class="col-md-4">	
-      <h4 id="git-macosx">macOS</h4>	
+    <div class="col-md-4">
+      <h3 id="git-macosx">macOS</h3>	
       <a href="https://www.youtube.com/watch?v=9LQhwETCdwY ">Video Tutorial</a>	
       <ol>
         <li>	
@@ -212,7 +212,7 @@ your operating system, and then follow the instructions to install
       </ol>	
     </div>	
     <div class="col-md-4">	
-      <h4 id="git-linux">Linux</h4>
+      <h3 id="git-linux">Linux</h3>
       <ol>
         <li>
           If Git is not already available on your machine you can try to	
@@ -239,3 +239,69 @@ your operating system, and then follow the instructions to install
 </div> {% comment %} End of 'Git' section. {% endcomment %}
 
 
+## OpenRefine
+
+> ## Data
+>
+> The data for this lesson is a part of the Data Carpentry Social Sciences
+> workshop. It is a teaching version of the Studying African Farmer-Led
+> Irrigation (SAFI) database. The SAFI dataset represents interviews of farmers
+> in two countries in eastern sub-Saharan Africa (Mozambique and Tanzania).
+> These interviews were conducted between November 2016 and June 2017 and probed
+> household features (e.g. construction materials used, number of household
+> members), agricultural practices (e.g. water usage), and assets (e.g. number
+> and types of livestock).
+> 
+> The data used in this lesson
+> is a subset of the teaching version that has been intentionally 'messed up'
+> for this lesson.
+> 
+> **Download** the data file to your computer by [clicking this link](https://mq-software-carpentry.github.io/R-git-for-research/data/SAFI_openrefine.csv).
+> (source link: <https://ndownloader.figshare.com/files/11502815>)
+{: .prereq}
+
+
+> ## Software
+>
+> For this lesson you will need **OpenRefine** (formerly Google Refine) and a
+> web browser.
+>
+> Note: this is a Java program that runs on your machine (not in the cloud). It runs inside your browser, but no web connection is needed.
+>
+{: .prereq}
+
+### Windows
+
+- Check that you have Firefox or Chrome browsers installed and set as your 
+default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
+- Download software from [http://openrefine.org](http://openrefine.org)
+- Unzip the downloaded file into a directory by right-clicking and 
+selecting “Extract…”. Name that directory something like OpenRefine.
+- Go to your newly created OpenRefine directory.
+- Launch OpenRefine
+- Click the openrefine.exe (this will launch a command prompt window, but you can ignore that and wait for the browser to launch)
+- If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
+
+### Mac
+
+- Check that you have Firefox or Chrome browsers installed and set as your 
+default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
+- Download software from [http://openrefine.org](http://openrefine.org)
+- Unzip the downloaded file into a directory by double-clicking it. Name 
+that directory something like OpenRefine.
+- Go to your newly created OpenRefine directory.
+- Launch OpenRefine
+- Drag icon into Applications folder, and Ctrl-click/Open… it. 
+- If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
+
+### Linux
+
+- Check that you have Firefox or Chrome browsers installed and set as your 
+default browser. OpenRefine runs in your default browser. It will not run correctly in Internet Explorer.
+- Download software from [http://openrefine.org](http://openrefine.org)
+- Unzip the downloaded file into a directory. Name 
+that directory something like OpenRefine.
+- Go to your newly created OpenRefine directory.
+- Launch OpenRefine
+- Type ./refine into the terminal within the OpenRefine directory
+- If you are using a different browser, or OpenRefine does not automatically open for you, point your browser at http://127.0.0.1:3333/ or http://localhost:3333 to launch the program.
