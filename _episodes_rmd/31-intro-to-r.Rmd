@@ -1,5 +1,5 @@
 ---
-title: "Introduction to R"
+title: "Starting with Coding"
 teaching: 50
 exercises: 30
 questions:
@@ -30,7 +30,7 @@ source: Rmd
 
 ```{r, include=FALSE}
 source("../bin/chunk-options.R")
-knitr_fig_path("01-")
+knitr_fig_path("17-")
 source("../bin/download_data.R")
 ```
 
@@ -46,7 +46,7 @@ You can get output from R simply by typing math in the console:
 
 However, to do useful and interesting things, we need to assign _values_ to
 _objects_. To create an object, we need to give it a name followed by the
-assignment operator `<-`, and the value we want to give it:
+assignment operator `<-`, and the value we want to give it. Type the following into your `Introduction.R` script file and run it. Throughout this lesson, we will be saving our code to script files and tracking our changes using the `Git` tab.
 
 ```{r, purl=FALSE}
 area_hectares <- 1.0
@@ -193,6 +193,10 @@ to select the whole line), then press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> +
 > > 
 > {: .solution}
 {: .challenge}
+
+
+At this stage we want to make sure we have saved our script and tracked changes. Save your script file if you have not done so already. Navigate to the `Git` tab in RStudio. As we have done 
+
 
 
 ### Functions and their arguments
