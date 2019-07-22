@@ -1,5 +1,5 @@
 ---
-title: "Hello World - Getting started with scripting"
+title: "Hello World - interacting with R"
 teaching: 25
 exercises: 15
 questions:
