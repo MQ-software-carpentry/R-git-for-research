@@ -33,7 +33,7 @@ keypoints:
 
 ```{r, include=FALSE}
 source("../bin/chunk-options.R")
-knitr_fig_path("03-")
+knitr_fig_path("19-")
 source("../bin/download_data.R")
 ```
 
@@ -66,7 +66,7 @@ The package **`tidyr`** addresses the common problem of wanting to reshape your 
 To learn more about **`dplyr`** and **`tidyr`** after the workshop, you may want to check out this
 [handy data transformation with **`dplyr`** cheatsheet](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf) and this [one about **`tidyr`**](https://github.com/rstudio/cheatsheets/raw/master/data-import.pdf).
 
-To make sure, everyone will use the same dataset for this lesson, we'll read again the SAFI dataset that we downloaded earlier.
+To make sure, everyone will use the same dataset for this lesson, we'll read again the SAFI dataset that we downloaded earlier. As in the previous lesson, continue to type your code into your script file, `SAFI_analysis.R` and run it using keyboard shortcuts or the `Run` button. Dont forget to save, commit, and push your changes to your remote repository periodically!
 
 ```{r, results = 'hide', purl = FALSE, message=FALSE, warning=FALSE}
 
@@ -199,6 +199,8 @@ Note that the final data frame (`interviews_god`) is the leftmost part of this e
 > > ```
 > {: .solution}
 {: .challenge}
+
+This is a good place to save, commit, and push your new code!
 
 ### Mutate
 
