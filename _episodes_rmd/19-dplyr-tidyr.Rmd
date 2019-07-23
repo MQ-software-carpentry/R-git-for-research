@@ -404,6 +404,8 @@ interviews %>%
 > {: .solution}
 {: .challenge}
 
+Save, commit, and push your changes. 
+
 ## Reshaping with gather and spread
 
 In the [spreadsheet
