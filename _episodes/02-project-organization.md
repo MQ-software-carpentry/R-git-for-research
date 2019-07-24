@@ -87,14 +87,14 @@ Furthermore, if you are working with sensitive data (such as personal identifiab
 Data can be stored on GitHub if it's a small, public dataset. One solution is to publish your data in an online data repository, then provide code that will allow authorised users to access it (for example, the way we just did above). There are other solutions, but they will vary depending on your specific project and data. 
 
 For the purposes of demonstration, let's make sure that our git repository does not track our raw data files. 
-  - Tick the checkbox next to the data file in the Git tab.
+  - Highlight (do NOT tick the checkbox) data file in the Git tab by clicking on it.
   - Click `More` > `Ignore` in the top bar.
-  - In the dialogue box, enter *.xlsx. This will ensure that excel files will not be tracked by git. 
-  - Git can be taught to ignore file types (e.g. *.csv), specific files, or even entire folders. If you have many data files in a `raw_data` folder, telling Git to ignore the folder is enough.
+  - In the dialogue box, you should see that the word `data` has been added to an exsting list of entries. This will ensure that the data folder will not be tracked by git.
+  - Git can be taught to ignore entire folders, file types (e.g. *.csv), and specific files. If you have your raw data files in a `data` folder, typing the name of the folder will do the trick. 
   
-There are several other reasons to tell git to ignore a file. Some systems produce machine-specific files that will not work on another computer. (for example, ".DS_Store" on Macs). When you close R Studio, if you choose to save your environment, R will produce .RHistory and .RData files that back up (potentially gigabytes!) of data from your workspace. Trackin these is probably not a good idea. 
+There are several other reasons to tell git to ignore a file. Some systems produce machine-specific files that will not work on another computer. (for example, ".DS_Store" on Macs). When you close R Studio, if you choose to save your environment, R will produce .RHistory and .RData files that back up (potentially gigabytes!) of data from your workspace. Tracking these is not a good idea. 
 
-Have a look at your project directory in the `Files` tab in the lower right hand panel. You should see a file called `.gitignore`. This is where git stores information about what files NOT to track. Notice that R Studio has automatically added its .Rdata and .Rhistory files to the list of ignored files. At the bottom of the list, you should see our recent addition, excel files. 
+Have a look at your project directory in the `Files` tab in the lower right hand panel. You should see a file called `.gitignore`. This is where git stores information about what files NOT to track. Notice that R Studio has automatically added its .Rdata and .Rhistory files to the list of ignored files. At the bottom of the list, you should see our recent addition, "data". 
 
 
 
