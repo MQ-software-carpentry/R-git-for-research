@@ -119,7 +119,7 @@ The homepage of GitHub when you first open your account should look something li
     - name it ("data-carpentry-r")
     - Choose public (can always change this, for now it saves us having to enter our password all the time) ...
     - Tick the checkbox to initialize with README
-    - Do not add a .gitignore, we will do this manually. 
+    - Add a .gitignore, and choose R from the list of templates. We will talk about this file later.  
     - Add a license if you wish (discuss this)
 
 - Click on "Create Repository"
@@ -163,7 +163,7 @@ Congratulations! Your new project is now ready to go.
 
 Let's make our first Commit. 
   - Navigate to the `Git` tab in the upper right hand pane of R Studio. The Git tab will display the names of any files in the project that you have changed since the last commit. 
-  - Click the checkbox next to your `Git_Setup.R` script (this "stages" or "adds" the files for commit). 
+  - Click the checkbox next to your `Git_Setup.R` script (this "stages" or "adds" the files for commit). You should also check the `data-carpentry-r.Rproj` file, which RStudio created when you made the project. This file stores project-specific settings. 
   - Click `Commit` from the top bar. 
   - A window will appear, where you will need to enter a commit message that describes the changes you just made. 
   - Click the `Commit` button. Commits can be composed of changes to several files at once. 
