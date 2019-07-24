@@ -87,9 +87,9 @@ Furthermore, if you are working with sensitive data (such as personal identifiab
 Data can be stored on GitHub if it's a small, public dataset. One solution is to publish your data in an online data repository, then provide code that will allow authorised users to access it (for example, the way we just did above). There are other solutions, but they will vary depending on your specific project and data. 
 
 For the purposes of demonstration, let's make sure that our git repository does not track our raw data files. 
-  - Highlight (do NOT tick the checkbox) data file in the Git tab by clicking on it.
+  - Highlight (do NOT tick the checkbox) the data file in the Git tab by clicking on it.
   - Click `More` > `Ignore` in the top bar.
-  - In the dialogue box, you should see that the word `data` has been added to an exsting list of entries. This will ensure that the data folder will not be tracked by git.
+  - In the dialogue box, you should see that the word `data` has been added to an existing list of entries. This will ensure that the data folder will not be tracked by git.
   - Git can be taught to ignore entire folders, file types (e.g. *.csv), and specific files. If you have your raw data files in a `data` folder, typing the name of the folder will do the trick. 
   
 There are several other reasons to tell git to ignore a file. Some systems produce machine-specific files that will not work on another computer. (for example, ".DS_Store" on Macs). When you close R Studio, if you choose to save your environment, R will produce .RHistory and .RData files that back up (potentially gigabytes!) of data from your workspace. Tracking these is not a good idea. 
