@@ -26,17 +26,16 @@ keypoints:
 
 
 
-We start by loading the required package. **`ggplot2`** is also included in the
-**`tidyverse`** package.
+We will be using **`ggplot2`** for this lesson, and it is also included in the
+**`tidyverse`** package. We could load load it separately, if we wanted to. 
 
 
 ~~~
-library(tidyverse)
+library(ggplot2)
 ~~~
 {: .language-r}
 
 If not still in the workspace, load the data we saved in the previous lesson.
-
 
 
 ~~~
@@ -47,35 +46,9 @@ interviews_plotting <- read_csv("data_output/interviews_plotting.csv")
 
 
 ~~~
-Parsed with column specification:
-cols(
-  .default = col_logical(),
-  key_ID = col_integer(),
-  village = col_character(),
-  interview_date = col_datetime(format = ""),
-  no_membrs = col_integer(),
-  years_liv = col_integer(),
-  respondent_wall_type = col_character(),
-  rooms = col_integer(),
-  memb_assoc = col_character(),
-  affect_conflicts = col_character(),
-  liv_count = col_integer(),
-  items_owned = col_character(),
-  no_meals = col_integer(),
-  months_lack_food = col_character(),
-  instanceID = col_character(),
-  number_months_lack_food = col_integer(),
-  number_items = col_integer()
-)
+Error in read_csv("data_output/interviews_plotting.csv"): could not find function "read_csv"
 ~~~
-{: .output}
-
-
-
-~~~
-See spec(...) for full column specifications.
-~~~
-{: .output}
+{: .error}
 
 ## Plotting with **`ggplot2`**
 
@@ -135,7 +108,12 @@ ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-first-ggplot-1.png" title="plot of chunk first-ggplot" alt="plot of chunk first-ggplot" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 The `+` in the **`ggplot2`** package is particularly useful because it allows
 you to modify existing `ggplot` objects. This means you can easily set up plot
@@ -190,7 +168,12 @@ ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-create-ggplot-object-1.png" title="plot of chunk create-ggplot-object" alt="plot of chunk create-ggplot-object" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 Then, we start modifying this plot to extract more information from it. For
 instance, we can add transparency (`alpha`) to avoid overplotting:
@@ -202,7 +185,12 @@ ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-adding-transparency-1.png" title="plot of chunk adding-transparency" alt="plot of chunk adding-transparency" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 That only helped a little bit with the overplotting problem. We can also
 introduce a little bit of randomness into the position of our points
@@ -215,7 +203,12 @@ ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-adding-jitter-1.png" title="plot of chunk adding-jitter" alt="plot of chunk adding-jitter" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 
 We can also add colors for all the points:
@@ -227,7 +220,12 @@ geom_jitter(alpha = 0.5, color = "blue")
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-adding-colors-1.png" title="plot of chunk adding-colors" alt="plot of chunk adding-colors" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 Or to color each village in the plot differently, you could use a vector as an input to the argument **`color`**.  Because we are now mapping features of the data to a color, instead of setting one color for all points, the color now needs to be set inside a call to the **`aes`** function. **`ggplot2`** will provide a different color corresponding to different values in the vector. We set the value of **`alpha`** outside of the **`aes`** function call because we are using the same value for all points. Here is an example where we color by **`village`**:
 
@@ -239,7 +237,12 @@ ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-color-by-species-1.png" title="plot of chunk color-by-species" alt="plot of chunk color-by-species" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = no_membrs, y = number_items)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 There appears to be a positive trend between number of household
 members and number of items owned (from the list provided). This trend
@@ -260,7 +263,12 @@ does not appear to be different by village.
 > > ~~~
 > > {: .language-r}
 > > 
-> > <img src="../fig/rmd-04-scatter-challenge-1.png" title="plot of chunk scatter-challenge" alt="plot of chunk scatter-challenge" width="612" style="display: block; margin: auto;" />
+> > 
+> > 
+> > ~~~
+> > Error in ggplot(data = interviews_plotting, aes(x = village, y = rooms)): object 'interviews_plotting' not found
+> > ~~~
+> > {: .error}
 > {: .solution}
 {: .challenge}
 
@@ -277,7 +285,12 @@ ggplot(data = interviews_plotting, aes(x = respondent_wall_type, y = rooms)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-boxplot-1.png" title="plot of chunk boxplot" alt="plot of chunk boxplot" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = respondent_wall_type, : object 'interviews_plotting' not found
+~~~
+{: .error}
 
 By adding points to a boxplot, we can have a better idea of the number of
 measurements and of their distribution:
@@ -290,7 +303,12 @@ ggplot(data = interviews_plotting, aes(x = respondent_wall_type, y = rooms)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-boxplot-with-points-1.png" title="plot of chunk boxplot-with-points" alt="plot of chunk boxplot-with-points" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = respondent_wall_type, : object 'interviews_plotting' not found
+~~~
+{: .error}
 
 We can see that muddaub houses and sunbrick houses tend to be smaller than
 burntbrick houses.
@@ -318,7 +336,12 @@ hidden?
 > > ~~~
 > > {: .language-r}
 > > 
-> > <img src="../fig/rmd-04-violin-plot-1.png" title="plot of chunk violin-plot" alt="plot of chunk violin-plot" width="612" style="display: block; margin: auto;" />
+> > 
+> > 
+> > ~~~
+> > Error in ggplot(data = interviews_plotting, aes(x = respondent_wall_type, : object 'interviews_plotting' not found
+> > ~~~
+> > {: .error}
 > {: .solution}
 >
 > So far, we've looked at the distribution of room number within wall type. Try
@@ -337,7 +360,12 @@ hidden?
 > > ~~~
 > > {: .language-r}
 > > 
-> > <img src="../fig/rmd-04-boxplot-exercise-1.png" title="plot of chunk boxplot-exercise" alt="plot of chunk boxplot-exercise" width="612" style="display: block; margin: auto;" />
+> > 
+> > 
+> > ~~~
+> > Error in ggplot(data = interviews_plotting, aes(x = respondent_wall_type, : object 'interviews_plotting' not found
+> > ~~~
+> > {: .error}
 > {: .solution}
 >
 > - Add color to the data points on your boxplot according to whether the
@@ -352,7 +380,12 @@ hidden?
 > > ~~~
 > > {: .language-r}
 > > 
-> > <img src="../fig/rmd-04-boxplot-exercise-factor-1.png" title="plot of chunk boxplot-exercise-factor" alt="plot of chunk boxplot-exercise-factor" width="612" style="display: block; margin: auto;" />
+> > 
+> > 
+> > ~~~
+> > Error in ggplot(data = interviews_plotting, aes(x = respondent_wall_type, : object 'interviews_plotting' not found
+> > ~~~
+> > {: .error}
 > {: .solution}
 {: .challenge}
 
@@ -369,7 +402,12 @@ ggplot(data = interviews_plotting, aes(x = respondent_wall_type)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-barplot-1-1.png" title="plot of chunk barplot-1" alt="plot of chunk barplot-1" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = respondent_wall_type)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 We can use the `fill` aesthetic for the `geom_bar()` geom to color bars by
 the portion of each count that is from each village.
@@ -381,7 +419,12 @@ ggplot(data = interviews_plotting, aes(x = respondent_wall_type)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-barplot-stack-1.png" title="plot of chunk barplot-stack" alt="plot of chunk barplot-stack" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = respondent_wall_type)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 This creates a stacked bar chart. These are generally more difficult to read
 than side-by-side bars. We can separate the portions of the stacked bar that
@@ -396,7 +439,12 @@ ggplot(data = interviews_plotting, aes(x = respondent_wall_type)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-barplot-dodge-1.png" title="plot of chunk barplot-dodge" alt="plot of chunk barplot-dodge" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(data = interviews_plotting, aes(x = respondent_wall_type)): object 'interviews_plotting' not found
+~~~
+{: .error}
 
 This is a nicer graphic, but we're more likely to be interested in the
 proportion of each housing type in each village than in the actual count of
@@ -418,6 +466,13 @@ percent_wall_type <- interviews_plotting %>%
 ~~~
 {: .language-r}
 
+
+
+~~~
+Error in interviews_plotting %>% filter(respondent_wall_type != "cement") %>% : could not find function "%>%"
+~~~
+{: .error}
+
 Now we can use this new data frame to create our plot showing the
 percentage of each house type in each village.
 
@@ -428,7 +483,12 @@ percentage of each house type in each village.
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-barplot-wall-type-1.png" title="plot of chunk barplot-wall-type" alt="plot of chunk barplot-wall-type" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_wall_type, aes(x = village, y = percent, fill = respondent_wall_type)): object 'percent_wall_type' not found
+~~~
+{: .error}
 
 > ## Exercise
 >
@@ -448,13 +508,30 @@ percentage of each house type in each village.
 > >   group_by(village) %>%
 > >   mutate(percent = n / sum(n)) %>%
 > >   ungroup()
+> > ~~~
+> > {: .language-r}
 > > 
+> > 
+> > 
+> > ~~~
+> > Error in interviews_plotting %>% filter(!is.na(memb_assoc)) %>% count(village, : could not find function "%>%"
+> > ~~~
+> > {: .error}
+> > 
+> > 
+> > 
+> > ~~~
 > > ggplot(percent_memb_assoc, aes(x = village, y = percent, fill = memb_assoc)) +
 > > geom_bar(stat = "identity", position = "dodge")
 > > ~~~
 > > {: .language-r}
 > > 
-> > <img src="../fig/rmd-04-barplot-memb-assoc-1.png" title="plot of chunk barplot-memb-assoc" alt="plot of chunk barplot-memb-assoc" width="612" style="display: block; margin: auto;" />
+> > 
+> > 
+> > ~~~
+> > Error in ggplot(percent_memb_assoc, aes(x = village, y = percent, fill = memb_assoc)): object 'percent_memb_assoc' not found
+> > ~~~
+> > {: .error}
 > >
 > > Ruaca had the lowest proportion of members in an irrigation association.
 > {: .solution}
@@ -480,7 +557,12 @@ ggplot(percent_wall_type, aes(x = village, y = percent, fill = respondent_wall_t
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-barplot-wall-types-labeled-1.png" title="plot of chunk barplot-wall-types-labeled" alt="plot of chunk barplot-wall-types-labeled" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_wall_type, aes(x = village, y = percent, fill = respondent_wall_type)): object 'percent_wall_type' not found
+~~~
+{: .error}
 
 ## Faceting
 
@@ -506,7 +588,12 @@ ggplot(percent_wall_type, aes(x = respondent_wall_type, y = percent)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-barplot-faceting-1.png" title="plot of chunk barplot-faceting" alt="plot of chunk barplot-faceting" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_wall_type, aes(x = respondent_wall_type, y = percent)): object 'percent_wall_type' not found
+~~~
+{: .error}
 
 Click the "Zoom" button in your RStudio plots pane to view a larger
 version of this plot.
@@ -528,7 +615,12 @@ ggplot(percent_wall_type, aes(x = respondent_wall_type, y = percent)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-barplot-theme-bw-1.png" title="plot of chunk barplot-theme-bw" alt="plot of chunk barplot-theme-bw" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_wall_type, aes(x = respondent_wall_type, y = percent)): object 'percent_wall_type' not found
+~~~
+{: .error}
 
 What if we wanted to see the proportion of respondents in each village
 who owned a particular item? We can calculate the percent of people
@@ -550,6 +642,13 @@ percent_items <- interviews_plotting %>%
 ~~~
 {: .language-r}
 
+
+
+~~~
+Error in interviews_plotting %>% gather(items, items_owned_logical, bicycle:no_listed_items) %>% : could not find function "%>%"
+~~~
+{: .error}
+
 To calculate this percentage data frame, we needed to use the `case_when()`
 parameter within `mutate()`. In our earlier examples, we knew that each house
 was one and only one of the types specified. However, people can (and do) own
@@ -568,7 +667,12 @@ ggplot(percent_items, aes(x = village, y = percent)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-percent-items-barplot-1.png" title="plot of chunk percent-items-barplot" alt="plot of chunk percent-items-barplot" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_items, aes(x = village, y = percent)): object 'percent_items' not found
+~~~
+{: .error}
 
 ## **`ggplot2`** themes
 
@@ -613,7 +717,12 @@ ggplot(percent_items, aes(x = village, y = percent)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-ggplot-customization-1.png" title="plot of chunk ggplot-customization" alt="plot of chunk ggplot-customization" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_items, aes(x = village, y = percent)): object 'percent_items' not found
+~~~
+{: .error}
 
 The axes have more informative names, but their readability can be improved by
 increasing the font size:
@@ -631,7 +740,12 @@ ggplot(percent_items, aes(x = village, y = percent)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-ggplot-customization-font-size-1.png" title="plot of chunk ggplot-customization-font-size" alt="plot of chunk ggplot-customization-font-size" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_items, aes(x = village, y = percent)): object 'percent_items' not found
+~~~
+{: .error}
 
 Note that it is also possible to change the fonts of your plots. If you are on
 Windows, you may have to install the [**`extrafont`**
@@ -660,7 +774,12 @@ ggplot(percent_items, aes(x = village, y = percent)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-ggplot-customization-label-orientation-1.png" title="plot of chunk ggplot-customization-label-orientation" alt="plot of chunk ggplot-customization-label-orientation" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_items, aes(x = village, y = percent)): object 'percent_items' not found
+~~~
+{: .error}
 
 If you like the changes you created better than the default theme, you can save
 them as an object to be able to easily apply them to other plots you may create.
@@ -685,7 +804,12 @@ ggplot(percent_items, aes(x = village, y = percent)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-04-ggplot-custom-themes-1.png" title="plot of chunk ggplot-custom-themes" alt="plot of chunk ggplot-custom-themes" width="612" style="display: block; margin: auto;" />
+
+
+~~~
+Error in ggplot(percent_items, aes(x = village, y = percent)): object 'percent_items' not found
+~~~
+{: .error}
 
 > ## Exercise
 >
