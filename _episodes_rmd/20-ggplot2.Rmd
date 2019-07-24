@@ -32,6 +32,7 @@ We will be using **`ggplot2`** for this lesson, and it is also included in the
 **`tidyverse`** package. We could load load it separately, if we wanted to. 
 
 ```{r load-package, message=FALSE, purl=FALSE, warning=FALSE}
+library(tidyverse)
 library(ggplot2)
 ```
 
@@ -129,6 +130,8 @@ interviews_plot +
 interviews_plot
 + geom_point()
 ```
+
+By now, our project has quite a few commits, so we will take a minute to look at the last Git function that we will cover in this workshop. Because Git has been tracking our changes all along, we have the capability of stepping back and seeing the progression of our changes. Click on the button that looks like a clock in the `Git` panel. The commit window will pop up, but the toggle button in the upper left corner will be flipped to `History`. In this window, you can step back and look at all the previous commits you (and others, if you have collaborators) have made on your project. You can select the file you want to view, as well as the specific commit. Git has some advanced functionality which allows you to jump back to a previous commit and even branch your workflow, but we will not be covering those in this workshop.  
 
 ## Building your plots iteratively
 
@@ -264,6 +267,8 @@ hidden?
 > {: .solution}
 {: .challenge}
 
+Save, commit, and push your changes!
+
 ## Barplots
 
 Barplots are also useful for visualizing categorical data. By default,
@@ -318,7 +323,7 @@ percentage of each house type in each village.
 ```{r barplot-wall-type}
  ggplot(percent_wall_type, aes(x = village, y = percent, fill = respondent_wall_type)) +
      geom_bar(stat = "identity", position = "dodge")
- ```
+```
 
 > ## Exercise
 >
@@ -437,6 +442,8 @@ ggplot(percent_items, aes(x = village, y = percent)) +
     theme_bw() +
     theme(panel.grid = element_blank())
 ```
+
+Save, commit, and push your changes if you haven't already!
 
 ## **`ggplot2`** themes
 
@@ -574,5 +581,8 @@ ggsave("fig_output/name_of_file.png", my_plot, width = 15, height = 10)
 ```
 
 Note: The parameters `width` and `height` also determine the font size in the saved plot.
+
+Save, commit and push your changes as always!! 
+You should now have a complete record of the workflow from this lesson, which you can go back to at any time. 
 
 {% include links.md %}
