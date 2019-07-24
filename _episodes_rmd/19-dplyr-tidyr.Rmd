@@ -704,4 +704,7 @@ if (!dir.exists("data_output")) dir.create("data_output")
 write_csv(interviews_plotting, path = "data_output/interviews_plotting.csv")
 ```
 
+Save, commit, and push your changes if you haven't done so already. 
+Notice that you now have several files to commit, as we have just saved a new data output file. You can commit them individually or together, however, it is good practice to package commits in such a way that the changes are related. For example, if your new script saves your data output file, you can commit the script together with the new csv. 
+
 {% include links.md %}

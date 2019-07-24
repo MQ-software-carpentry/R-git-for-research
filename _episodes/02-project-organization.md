@@ -50,8 +50,8 @@ Let's create a folder structure now.
 
   - In the `Files` tab of the lower right hand pane of RStudio, click on the `New Folder` button. 
   - Create a folder named **`data`**
-  - Repeat to create another folder called **`scripts`**, and another called **`figures`**. 
-  - As you progress through your project, you may wish to create additional folders, such as **`results`** or **`manuscript`**. For this workshop, we will focus on R-related folders like Data, Scripts, and Figures.
+  - Repeat to create another folder called **`scripts`**, and another called **`fig_output`**. 
+  - As you progress through your project, you may wish to create additional folders, such as **`results`** or **`documents`**. For this workshop, we will focus on R-related folders like Data, Scripts, and Figures.
   
 Since we already have a script, let's move it into our **`scripts`** folder.
   - Tick the checkbox next to `Git_Setup.R` in the `Files` tab. 
