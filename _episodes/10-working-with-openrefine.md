@@ -32,9 +32,18 @@ OpenRefine can import a variety of file types, including tab separated (`tsv`), 
 In this first step, we'll browse our computer to the sample data file for this lesson.
 In this case, we will be using data obtained from interviews of farmers in two countries in eastern sub-Saharan Africa (Mozambique and Tanzania).
 Instructions on downloading the data are available
-[here]({{site.baseurl}}/setup.html) or by [clicking this link](https://mq-software-carpentry.github.io/R-git-for-research/data/SAFI_openrefine.csv).
+[here]({{site.baseurl}}/setup.html) or by
+[clicking this link](https://mq-software-carpentry.github.io/R-git-for-research/data/SAFI_openrefine.csv).
+We could also download it from R.
 
-Once OpenRefine is launched in your browser, the left margin has options to `Create Project`, `Open Project`, or `Import Project`. Here we will create a new project:
+```r
+download.file(url = "https://mq-software-carpentry.github.io/R-git-for-research/data/SAFI_openrefine.csv", destfile = "./data/SAFI_openrefine.csv")
+```
+
+We have changed our R script, so we should commit our changes to Git.
+
+Once OpenRefine is launched in your browser, the left margin has options to `Create Project`,
+`Open Project`, or `Import Project`. Here we will create a new project:
 
 1\. Click `Create Project` and select `Get data from` `This Computer`.
 2\. Click `Choose Files` and select the file `SAFI_openrefine.csv`. Click `Open` or double-click on the filename.
