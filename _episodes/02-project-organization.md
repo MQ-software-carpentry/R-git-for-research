@@ -96,7 +96,7 @@ There are several other reasons to tell git to ignore a file. Some systems produ
 
 Have a look at your project directory in the `Files` tab in the lower right hand panel. You should see a file called `.gitignore`. This is where git stores information about what files NOT to track. Notice that R Studio has automatically added its .Rdata and .Rhistory files to the list of ignored files. At the bottom of the list, you should see our recent addition, "data". 
 
-
+Because we have edited our .gitignore file, we need to save, commit, and push our changes before moving on. We also need to commit our `Git_Setup.R` script once more, because its location has changed. If you tick the checkboxes next to `Git_Setup.R` and `scripts`, Git should recognise that the file has simply been moved. This is indicated by the purple square with R written in it that shows up once both items have been ticked. R stands for "renamed". 
 
 
 
