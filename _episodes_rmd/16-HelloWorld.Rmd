@@ -149,4 +149,6 @@ library(tidyverse)
 
 This code activates the **`tidyverse`** package and makes its functionality available in RStudio. 
 
+Before we move on, use the `Git` panel to commit and push your changes to `Introduction.R`. Make sure it is saved before committing!
+
 {% include links.md %}
