@@ -60,6 +60,9 @@ An important note for backwards compatibility: you can open CSV files in Excel!
 
 ![Saving an Excel file to CSV](../fig/excel-to-csv.png)
 
+Now would be a good time to commit the changes that we have made to the file. Go back to R.
+Notice that the CSV file appears in the Git window. Stage the file, Commit and Push.
+
 > ## A note on R and `xls`
 > 
 > There are R packages that can read `xls` files (as well as
