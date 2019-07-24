@@ -24,19 +24,18 @@ keypoints:
 
 ```{r, include=FALSE}
 source("../bin/chunk-options.R")
-knitr_fig_path("04-")
+knitr_fig_path("20-")
 source("../bin/download_data.R")
 ```
 
-We start by loading the required package. **`ggplot2`** is also included in the
-**`tidyverse`** package.
+We will be using **`ggplot2`** for this lesson, and it is also included in the
+**`tidyverse`** package. We could load load it separately, if we wanted to. 
 
 ```{r load-package, message=FALSE, purl=FALSE, warning=FALSE}
-library(tidyverse)
+library(ggplot2)
 ```
 
 If not still in the workspace, load the data we saved in the previous lesson.
-
 
 ```{r load-data, purl=FALSE}
 interviews_plotting <- read_csv("data_output/interviews_plotting.csv")
