@@ -17,7 +17,7 @@
         var parser = new DOMParser();
         var htmlDoc = parser.parseFromString(this.responseText,"text/html");
         var htmlDocArticle = htmlDoc.getElementsByTagName("article")[0];
-        article_here.innerHTML = htmlDocArticle.innerHTML.replace(/"\.\.\/fig\//, "\"fig/" );
+        article_here.innerHTML = htmlDocArticle.innerHTML.replace(/"\.\.\/fig\//g, "\"{{ page.root }}/fig/" );
         }
       }
       episode_url = "{{ page.root }}" + lesson_episodes[i];

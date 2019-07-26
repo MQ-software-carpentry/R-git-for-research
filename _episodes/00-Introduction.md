@@ -103,7 +103,7 @@ Throughout this workshop, you will acquiring a knowledge of basic git functional
 A copy of your repository can (should be!) hosted in the cloud, to protect yourself from data loss due to computer crash or failure. 
 
 GitHub is a service that offers cloud hosting for your work. There are several other hosting services available, including GitLab and BitBucket, but GitHub is the most common one. 
-If you haven't already, head to [GitHub](http://github.com) now and create an account. Validate your email account (check your spam folder at [mimecast](mimecast.com) if you didn't get an email).
+If you haven't already, head to [GitHub](http://github.com) now and create an account. Validate your email account (check your spam folder at [mimecast](https://www.mimecast.com/) if you didn't get an email).
 
 ### Setting up your 'remote' repository in the cloud
 
