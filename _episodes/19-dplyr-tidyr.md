@@ -885,7 +885,7 @@ that interview respondent owned that item.
 
 ~~~
 interviews_items_owned <- interviews %>%
-    mutate(split_items = strsplit(items_owned, ";")) %>%
+    mutate(split_items = str_split(items_owned, ";")) %>%
     unnest() %>%
     mutate(items_owned_logical = TRUE) %>%
     spread(key = split_items, value = items_owned_logical, fill = FALSE)
@@ -910,13 +910,13 @@ interviews_items_owned <- interviews %>%
 ~~~
 {: .language-r}
 
-Then we use the new function `strsplit()` to split the column `items_owned`
+Then we use the new function `str_split()` to split the column `items_owned`
 based on the presence of semi-colons (`;`). This creates a new column
 `split_items` that contains each item as a list.
 
 
 ~~~
-mutate(split_items = strsplit(items_owned, ";")) %>%
+mutate(split_items = str_split(items_owned, ";")) %>%
 ~~~
 {: .language-r}
 
@@ -1014,7 +1014,7 @@ interviews_items_owned %>%
 > > 
 > > ~~~
 > > interviews_months_no_food <- interviews %>%
-> >   mutate(split_months = strsplit(months_lack_food, ";")) %>%
+> >   mutate(split_months = str_split(months_lack_food, ";")) %>%
 > >   unnest() %>%
 > >   mutate(months_lack_food_logical  = TRUE) %>%
 > >   spread(key = split_months, value = months_lack_food_logical, fill = FALSE)
@@ -1077,13 +1077,13 @@ data value. To do this, we will use spread to expand the
 ~~~
 interviews_plotting <- interviews %>%
     ## spread data by items_owned
-    mutate(split_items = strsplit(items_owned, ";")) %>%
+    mutate(split_items = str_split(items_owned, ";")) %>%
     unnest() %>%
     mutate(items_owned_logical = TRUE) %>%
     spread(key = split_items, value = items_owned_logical, fill = FALSE) %>%
     rename(no_listed_items = `<NA>`) %>%
     ## spread data by months_lack_food
-    mutate(split_months = strsplit(months_lack_food, ";")) %>%
+    mutate(split_months = str_split(months_lack_food, ";")) %>%
     unnest() %>%
     mutate(months_lack_food_logical = TRUE) %>%
     spread(key = split_months, value = months_lack_food_logical, fill = FALSE) %>%
