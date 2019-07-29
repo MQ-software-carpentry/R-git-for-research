@@ -404,7 +404,7 @@ interviews %>%
 > {: .solution}
 {: .challenge}
 
-Save, commit, and push your changes. 
+Save, commit, and push your changes.
 
 ## Reshaping with gather and spread
 
@@ -590,9 +590,8 @@ mutate(items_owned_logical = TRUE) %>%
     spread(key = split_items, value = items_owned_logical, fill = FALSE)
 ```
 
-View the `interviews_items_owned` data frame. It should have `r
-nrow(interviews)` rows (the same number of rows you had originally), but extra
-columns for each item. 
+View the `interviews_items_owned` data frame. It should have `r nrow(interviews)`
+rows (the same number of rows you had originally), but extra columns for each item.
 
 You may notice that the last column in called `\`<NA>\``. This is because the respondents did not own any of the items that was in the interviewer's list. We can use the `rename()` function to change this name to something more meaningful:
 
@@ -704,7 +703,7 @@ if (!dir.exists("data_output")) dir.create("data_output")
 write_csv(interviews_plotting, path = "data_output/interviews_plotting.csv")
 ```
 
-Save, commit, and push your changes if you haven't done so already. 
-Notice that you now have several files to commit, as we have just saved a new data output file. You can commit them individually or together, however, it is good practice to package commits in such a way that the changes are related. For example, if your new script saves your data output file, you can commit the script together with the new csv. 
+Save, commit, and push your changes if you haven't done so already.
+Notice that you now have several files to commit, as we have just saved a new data output file. You can commit them individually or together, however, it is good practice to package commits in such a way that the changes are related. For example, if your new script saves your data output file, you can commit the script together with the new csv.
 
 {% include links.md %}
