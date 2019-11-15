@@ -115,8 +115,8 @@ filter(interviews, village == "God")
 
 ~~~
 # A tibble: 43 x 14
-   key_ID village interview_date      no_membrs years_liv respondent_wall…
-    <int> <chr>   <dttm>                  <int>     <int> <chr>           
+   key_ID village interview_date      no_membrs years_liv respondent_wall~
+    <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>           
  1      1 God     2016-11-17 00:00:00         3         4 muddaub         
  2      1 God     2016-11-17 00:00:00         7         9 muddaub         
  3      3 God     2016-11-17 00:00:00        10        15 burntbricks     
@@ -127,9 +127,9 @@ filter(interviews, village == "God")
  8     11 God     2016-11-21 00:00:00         6        20 sunbricks       
  9     12 God     2016-11-21 00:00:00         7        20 burntbricks     
 10     13 God     2016-11-21 00:00:00         6         8 burntbricks     
-# … with 33 more rows, and 8 more variables: rooms <int>,
-#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <int>,
-#   items_owned <chr>, no_meals <int>, months_lack_food <chr>,
+# ... with 33 more rows, and 8 more variables: rooms <dbl>,
+#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <dbl>,
+#   items_owned <chr>, no_meals <dbl>, months_lack_food <chr>,
 #   instanceID <chr>
 ~~~
 {: .output}
@@ -196,7 +196,7 @@ interviews %>%
 ~~~
 # A tibble: 43 x 2
    no_membrs years_liv
-       <int>     <int>
+       <dbl>     <dbl>
  1         3         4
  2         7         9
  3        10        15
@@ -207,7 +207,7 @@ interviews %>%
  8         6        20
  9         7        20
 10         6         8
-# … with 33 more rows
+# ... with 33 more rows
 ~~~
 {: .output}
 
@@ -242,7 +242,7 @@ interviews_god
 ~~~
 # A tibble: 43 x 2
    no_membrs years_liv
-       <int>     <int>
+       <dbl>     <dbl>
  1         3         4
  2         7         9
  3        10        15
@@ -253,7 +253,7 @@ interviews_god
  8         6        20
  9         7        20
 10         6         8
-# … with 33 more rows
+# ... with 33 more rows
 ~~~
 {: .output}
 
@@ -281,7 +281,7 @@ Note that the final data frame (`interviews_god`) is the leftmost part of this e
 > > ~~~
 > > # A tibble: 33 x 3
 > >    affect_conflicts liv_count no_meals
-> >    <chr>                <int>    <int>
+> >    <chr>                <dbl>    <dbl>
 > >  1 once                     3        2
 > >  2 never                    2        2
 > >  3 never                    2        3
@@ -292,7 +292,7 @@ Note that the final data frame (`interviews_god`) is the leftmost part of this e
 > >  8 more_once                2        3
 > >  9 once                     3        3
 > > 10 never                    3        3
-> > # … with 23 more rows
+> > # ... with 23 more rows
 > > ~~~
 > > {: .output}
 > {: .solution}
@@ -320,8 +320,8 @@ interviews %>%
 
 ~~~
 # A tibble: 131 x 15
-   key_ID village interview_date      no_membrs years_liv respondent_wall…
-    <int> <chr>   <dttm>                  <int>     <int> <chr>           
+   key_ID village interview_date      no_membrs years_liv respondent_wall~
+    <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>           
  1      1 God     2016-11-17 00:00:00         3         4 muddaub         
  2      1 God     2016-11-17 00:00:00         7         9 muddaub         
  3      3 God     2016-11-17 00:00:00        10        15 burntbricks     
@@ -329,12 +329,12 @@ interviews %>%
  5      5 God     2016-11-17 00:00:00         7        40 burntbricks     
  6      6 God     2016-11-17 00:00:00         3         3 muddaub         
  7      7 God     2016-11-17 00:00:00         6        38 muddaub         
- 8      8 Chirod… 2016-11-16 00:00:00        12        70 burntbricks     
- 9      9 Chirod… 2016-11-16 00:00:00         8         6 burntbricks     
-10     10 Chirod… 2016-12-16 00:00:00        12        23 burntbricks     
-# … with 121 more rows, and 9 more variables: rooms <int>,
-#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <int>,
-#   items_owned <chr>, no_meals <int>, months_lack_food <chr>,
+ 8      8 Chirod~ 2016-11-16 00:00:00        12        70 burntbricks     
+ 9      9 Chirod~ 2016-11-16 00:00:00         8         6 burntbricks     
+10     10 Chirod~ 2016-12-16 00:00:00        12        23 burntbricks     
+# ... with 121 more rows, and 9 more variables: rooms <dbl>,
+#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <dbl>,
+#   items_owned <chr>, no_meals <dbl>, months_lack_food <chr>,
 #   instanceID <chr>, people_per_room <dbl>
 ~~~
 {: .output}
@@ -360,21 +360,21 @@ interviews %>%
 
 ~~~
 # A tibble: 92 x 15
-   key_ID village interview_date      no_membrs years_liv respondent_wall…
-    <int> <chr>   <dttm>                  <int>     <int> <chr>           
+   key_ID village interview_date      no_membrs years_liv respondent_wall~
+    <dbl> <chr>   <dttm>                  <dbl>     <dbl> <chr>           
  1      1 God     2016-11-17 00:00:00         7         9 muddaub         
  2      7 God     2016-11-17 00:00:00         6        38 muddaub         
- 3      8 Chirod… 2016-11-16 00:00:00        12        70 burntbricks     
- 4      9 Chirod… 2016-11-16 00:00:00         8         6 burntbricks     
- 5     10 Chirod… 2016-12-16 00:00:00        12        23 burntbricks     
+ 3      8 Chirod~ 2016-11-16 00:00:00        12        70 burntbricks     
+ 4      9 Chirod~ 2016-11-16 00:00:00         8         6 burntbricks     
+ 5     10 Chirod~ 2016-12-16 00:00:00        12        23 burntbricks     
  6     12 God     2016-11-21 00:00:00         7        20 burntbricks     
  7     13 God     2016-11-21 00:00:00         6         8 burntbricks     
  8     15 God     2016-11-21 00:00:00         5        30 sunbricks       
  9     21 God     2016-11-21 00:00:00         8        20 burntbricks     
 10     24 Ruaca   2016-11-21 00:00:00         6         4 burntbricks     
-# … with 82 more rows, and 9 more variables: rooms <int>,
-#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <int>,
-#   items_owned <chr>, no_meals <int>, months_lack_food <chr>,
+# ... with 82 more rows, and 9 more variables: rooms <dbl>,
+#   memb_assoc <chr>, affect_conflicts <chr>, liv_count <dbl>,
+#   items_owned <chr>, no_meals <dbl>, months_lack_food <chr>,
 #   instanceID <chr>, people_per_room <dbl>
 ~~~
 {: .output}
@@ -661,7 +661,7 @@ interviews %>%
 > > ~~~
 > > # A tibble: 2 x 2
 > >   no_meals     n
-> >      <int> <int>
+> >      <dbl> <int>
 > > 1        2    52
 > > 2        3    79
 > > ~~~
@@ -733,7 +733,7 @@ interviews %>%
 > {: .solution}
 {: .challenge}
 
-Save, commit, and push your changes. 
+Save, commit, and push your changes.
 
 ## Reshaping with gather and spread
 
@@ -885,7 +885,7 @@ that interview respondent owned that item.
 
 ~~~
 interviews_items_owned <- interviews %>%
-    mutate(split_items = strsplit(items_owned, ";")) %>%
+    mutate(split_items = str_split(items_owned, ";")) %>%
     unnest() %>%
     mutate(items_owned_logical = TRUE) %>%
     spread(key = split_items, value = items_owned_logical, fill = FALSE)
@@ -910,13 +910,13 @@ interviews_items_owned <- interviews %>%
 ~~~
 {: .language-r}
 
-Then we use the new function `strsplit()` to split the column `items_owned`
+Then we use the new function `str_split()` to split the column `items_owned`
 based on the presence of semi-colons (`;`). This creates a new column
 `split_items` that contains each item as a list.
 
 
 ~~~
-mutate(split_items = strsplit(items_owned, ";")) %>%
+mutate(split_items = str_split(items_owned, ";")) %>%
 ~~~
 {: .language-r}
 
@@ -942,9 +942,8 @@ mutate(items_owned_logical = TRUE) %>%
 ~~~
 {: .language-r}
 
-View the `interviews_items_owned` data frame. It should have `r
-nrow(interviews)` rows (the same number of rows you had originally), but extra
-columns for each item. 
+View the `interviews_items_owned` data frame. It should have 131
+rows (the same number of rows you had originally), but extra columns for each item.
 
 You may notice that the last column in called `\`<NA>\``. This is because the respondents did not own any of the items that was in the interviewer's list. We can use the `rename()` function to change this name to something more meaningful:
 
@@ -1015,7 +1014,7 @@ interviews_items_owned %>%
 > > 
 > > ~~~
 > > interviews_months_no_food <- interviews %>%
-> >   mutate(split_months = strsplit(months_lack_food, ";")) %>%
+> >   mutate(split_months = str_split(months_lack_food, ";")) %>%
 > >   unnest() %>%
 > >   mutate(months_lack_food_logical  = TRUE) %>%
 > >   spread(key = split_months, value = months_lack_food_logical, fill = FALSE)
@@ -1078,13 +1077,13 @@ data value. To do this, we will use spread to expand the
 ~~~
 interviews_plotting <- interviews %>%
     ## spread data by items_owned
-    mutate(split_items = strsplit(items_owned, ";")) %>%
+    mutate(split_items = str_split(items_owned, ";")) %>%
     unnest() %>%
     mutate(items_owned_logical = TRUE) %>%
     spread(key = split_items, value = items_owned_logical, fill = FALSE) %>%
     rename(no_listed_items = `<NA>`) %>%
     ## spread data by months_lack_food
-    mutate(split_months = strsplit(months_lack_food, ";")) %>%
+    mutate(split_months = str_split(months_lack_food, ";")) %>%
     unnest() %>%
     mutate(months_lack_food_logical = TRUE) %>%
     spread(key = split_months, value = months_lack_food_logical, fill = FALSE) %>%
@@ -1104,7 +1103,7 @@ write_csv(interviews_plotting, path = "data_output/interviews_plotting.csv")
 
 
 
-Save, commit, and push your changes if you haven't done so already. 
-Notice that you now have several files to commit, as we have just saved a new data output file. You can commit them individually or together, however, it is good practice to package commits in such a way that the changes are related. For example, if your new script saves your data output file, you can commit the script together with the new csv. 
+Save, commit, and push your changes if you haven't done so already.
+Notice that you now have several files to commit, as we have just saved a new data output file. You can commit them individually or together, however, it is good practice to package commits in such a way that the changes are related. For example, if your new script saves your data output file, you can commit the script together with the new csv.
 
 {% include links.md %}

@@ -404,7 +404,7 @@ interviews %>%
 > {: .solution}
 {: .challenge}
 
-Save, commit, and push your changes. 
+Save, commit, and push your changes.
 
 ## Reshaping with gather and spread
 
@@ -549,7 +549,7 @@ that interview respondent owned that item.
 
 ```{r, purl=FALSE}
 interviews_items_owned <- interviews %>%
-    mutate(split_items = strsplit(items_owned, ";")) %>%
+    mutate(split_items = str_split(items_owned, ";")) %>%
     unnest() %>%
     mutate(items_owned_logical = TRUE) %>%
     spread(key = split_items, value = items_owned_logical, fill = FALSE)
@@ -564,12 +564,12 @@ the `interviews` dataframe.
 interviews_items_owned <- interviews %>%
 ```
 
-Then we use the new function `strsplit()` to split the column `items_owned`
+Then we use the new function `str_split()` to split the column `items_owned`
 based on the presence of semi-colons (`;`). This creates a new column
 `split_items` that contains each item as a list.
 
 ```{r, eval=FALSE}
-mutate(split_items = strsplit(items_owned, ";")) %>%
+mutate(split_items = str_split(items_owned, ";")) %>%
 ```
 
 Now that we have the `items_owned` column as a list, we can use the `tidyr`
@@ -590,9 +590,8 @@ mutate(items_owned_logical = TRUE) %>%
     spread(key = split_items, value = items_owned_logical, fill = FALSE)
 ```
 
-View the `interviews_items_owned` data frame. It should have `r
-nrow(interviews)` rows (the same number of rows you had originally), but extra
-columns for each item. 
+View the `interviews_items_owned` data frame. It should have `r nrow(interviews)`
+rows (the same number of rows you had originally), but extra columns for each item.
 
 You may notice that the last column in called `\`<NA>\``. This is because the respondents did not own any of the items that was in the interviewer's list. We can use the `rename()` function to change this name to something more meaningful:
 
@@ -631,7 +630,7 @@ interviews_items_owned %>%
 > >
 > > ```{r}
 > > interviews_months_no_food <- interviews %>%
-> >   mutate(split_months = strsplit(months_lack_food, ";")) %>%
+> >   mutate(split_months = str_split(months_lack_food, ";")) %>%
 > >   unnest() %>%
 > >   mutate(months_lack_food_logical  = TRUE) %>%
 > >   spread(key = split_months, value = months_lack_food_logical, fill = FALSE)
@@ -678,13 +677,13 @@ data value. To do this, we will use spread to expand the
 ```{r, purl=FALSE}
 interviews_plotting <- interviews %>%
     ## spread data by items_owned
-    mutate(split_items = strsplit(items_owned, ";")) %>%
+    mutate(split_items = str_split(items_owned, ";")) %>%
     unnest() %>%
     mutate(items_owned_logical = TRUE) %>%
     spread(key = split_items, value = items_owned_logical, fill = FALSE) %>%
     rename(no_listed_items = `<NA>`) %>%
     ## spread data by months_lack_food
-    mutate(split_months = strsplit(months_lack_food, ";")) %>%
+    mutate(split_months = str_split(months_lack_food, ";")) %>%
     unnest() %>%
     mutate(months_lack_food_logical = TRUE) %>%
     spread(key = split_months, value = months_lack_food_logical, fill = FALSE) %>%
@@ -704,7 +703,7 @@ if (!dir.exists("data_output")) dir.create("data_output")
 write_csv(interviews_plotting, path = "data_output/interviews_plotting.csv")
 ```
 
-Save, commit, and push your changes if you haven't done so already. 
-Notice that you now have several files to commit, as we have just saved a new data output file. You can commit them individually or together, however, it is good practice to package commits in such a way that the changes are related. For example, if your new script saves your data output file, you can commit the script together with the new csv. 
+Save, commit, and push your changes if you haven't done so already.
+Notice that you now have several files to commit, as we have just saved a new data output file. You can commit them individually or together, however, it is good practice to package commits in such a way that the changes are related. For example, if your new script saves your data output file, you can commit the script together with the new csv.
 
 {% include links.md %}
